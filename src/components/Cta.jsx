@@ -38,7 +38,7 @@ export default function Cta() {
                     <div className="contact-qr-corner contact-qr-corner--bl" />
                     <div className="contact-qr-corner contact-qr-corner--br" />
                     <img
-                      src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=mailto:hello@criyx.ai"
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=mailto:criyx.ai@gmail.com"
                       alt="QR code to email Criyx"
                       className="contact-qr-img"
                       loading="lazy"
@@ -47,12 +47,12 @@ export default function Cta() {
                   <div className="contact-qr-text">
                     <span className="contact-qr-label">Scan to email us</span>
                     <span className="contact-qr-hint">Opens your default mail app</span>
-                    <a href="mailto:hello@criyx.ai" className="contact-qr-email">
+                    <a href="mailto:criyx.ai@gmail.com" className="contact-qr-email">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                         <polyline points="22,6 12,13 2,6" />
                       </svg>
-                      hello@criyx.ai
+                      criyx.ai@gmail.com
                     </a>
                   </div>
                 </div>
