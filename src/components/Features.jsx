@@ -1,10 +1,33 @@
-const features = [
-  'Human-like AI conversations',
-  'Lead capture and qualification',
-  'WhatsApp campaigns and utility messages',
-  'CRM updates and pipeline movement',
-  'Follow-ups and reminders',
-  'Analytics and reporting',
+const featureGroups = [
+  {
+    category: 'Conversations',
+    items: ['Human-like AI conversations', 'WhatsApp campaigns and utility messages'],
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+  },
+  {
+    category: 'Automation',
+    items: ['Lead capture and qualification', 'Follow-ups and reminders', 'CRM updates and pipeline movement'],
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      </svg>
+    ),
+  },
+  {
+    category: 'Insights',
+    items: ['Analytics and reporting'],
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+    ),
+  },
 ]
 
 const flowNodes = [
@@ -35,37 +58,49 @@ export default function Features() {
           <div className="features-card-shimmer" />
           <div className="features-layout">
             <div className="features-text">
-              <div className="features-list">
-                {features.map((f) => (
-                  <div key={f} className="features-list-item">
-                    <div className="features-list-check">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                    </div>
-                    <span>{f}</span>
+              {featureGroups.map((group) => (
+                <div key={group.category} className="features-group">
+                  <div className="features-group-header">
+                    <span className="features-group-icon">{group.icon}</span>
+                    <span className="features-group-label">{group.category}</span>
                   </div>
-                ))}
-              </div>
+                  <div className="features-list">
+                    {group.items.map((f) => (
+                      <div key={f} className="features-list-item">
+                        <div className="features-list-check">
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                        </div>
+                        <span>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
             <div className="features-diagram">
               <div className="diagram-card">
                 <div className="diagram-header">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
-                  <span>Workflow Pipeline</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                  <span>How it flows</span>
                 </div>
                 <div className="diagram-flow">
                   {flowNodes.map((node, i) => (
                     <div key={node.label} className="diagram-step">
-                      <div className="diagram-node">
+                      <div className="diagram-node" style={{ animationDelay: `${i * 0.08}s` }}>
+                        <span className="diagram-node-dot">{i + 1}</span>
                         <span className="node-icon">{node.icon}</span>
                         <span>{node.label}</span>
                       </div>
                       {i < flowNodes.length - 1 && (
                         <div className="diagram-arrow">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
                         </div>
                       )}
                     </div>
                   ))}
+                </div>
+                <div className="diagram-footnote">
+                  End-to-end automation pipeline
                 </div>
               </div>
             </div>
