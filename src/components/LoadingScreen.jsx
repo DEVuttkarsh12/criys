@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logo from '../assets/criyx.avif'
 
 const messages = [
   'Initializing systems...',
@@ -41,7 +42,7 @@ export default function LoadingScreen({ onComplete }) {
     <div className={`loading-screen${fading ? ' loading-screen--fade' : ''}`}>
       <div className="loading-ambient" />
       <div className="loading-content">
-        <img src="/src/assets/criyx.avif" alt="Criyx" className="loading-logo" />
+        <img src={logo} alt="Criyx" className="loading-logo" />
         <p className="loading-text">{messages[msgIndex]}</p>
         <div className="loading-bar-track">
           <div className="loading-bar-fill" style={{ width: `${progress * 100}%` }} />
