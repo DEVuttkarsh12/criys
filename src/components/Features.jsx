@@ -60,51 +60,47 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="features-card reveal reveal-delay-1">
-          <div className="features-card-glow" />
-          <div className="features-card-shimmer" />
-          <div className="features-layout">
-            <div className="features-groups">
-              {groups.map((g) => (
-                <div key={g.label} className="features-group">
-                  <div className="features-group-top">
-                    <span className="features-group-icon">{g.icon}</span>
-                    <span className="features-group-label">{g.label}</span>
-                  </div>
-                  <div className="features-group-items">
-                    {g.items.map((item) => (
-                      <div key={item} className="features-group-item">
-                        <div className="features-group-check">
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                        </div>
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
+        <div className="features-layout">
+          <div className="features-groups">
+            {groups.map((g) => (
+              <div key={g.label} className="features-group">
+                <div className="features-group-top">
+                  <span className="features-group-icon">{g.icon}</span>
+                  <span className="features-group-label">{g.label}</span>
                 </div>
-              ))}
-            </div>
-
-            <div className="features-pipeline">
-              <div className="pipeline-card">
-                <div className="pipeline-header">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
-                  <span>How it flows</span>
-                </div>
-                <div className="pipeline-track">
-                  <div className="pipeline-rail" />
-                  {pipeline.map((node, i) => (
-                    <div key={node.label} className="pipeline-step" style={{ animationDelay: `${i * 0.08}s` }}>
-                      <div className="pipeline-node">
-                        <span className="pipeline-dot">{i + 1}</span>
-                        <span className="pipeline-icon">{node.icon}</span>
-                        <span className="pipeline-label">{node.label}</span>
+                <div className="features-group-items">
+                  {g.items.map((item) => (
+                    <div key={item} className="features-group-item">
+                      <div className="features-group-check">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                       </div>
+                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
-                <div className="pipeline-footnote">End-to-end automation pipeline</div>
               </div>
+            ))}
+          </div>
+
+          <div className="features-pipeline">
+            <div className="pipeline-card">
+              <div className="pipeline-header">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                <span>How it flows</span>
+              </div>
+              <div className="pipeline-track">
+                <div className="pipeline-rail" />
+                {pipeline.map((node, i) => (
+                  <div key={node.label} className="pipeline-step" style={{ animationDelay: `${i * 0.08}s` }}>
+                    <div className="pipeline-node">
+                      <span className="pipeline-dot">{i + 1}</span>
+                      <span className="pipeline-icon">{node.icon}</span>
+                      <span className="pipeline-label">{node.label}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="pipeline-footnote">End-to-end automation pipeline</div>
             </div>
           </div>
         </div>
