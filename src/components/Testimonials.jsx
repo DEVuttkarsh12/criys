@@ -43,6 +43,7 @@ function StarRating({ count }) {
 export default function Testimonials() {
   return (
     <section className="section" id="testimonials">
+      <div className="testimonials-pattern" />
       <div className="section-inner">
         <div className="section-header">
           <span className="section-tag reveal">Testimonials</span>
@@ -57,10 +58,19 @@ export default function Testimonials() {
         <div className="testimonials-grid">
           {testimonials.map((t, i) => (
             <div key={t.name} className="testimonial-card">
-              <div className="testimonial-card-glow" />
+              <div className="testimonial-ambient" />
+              <div className="testimonial-quote-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1" opacity="0.15">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                  <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                </svg>
+              </div>
               <div className="testimonial-top">
                 <div className="testimonial-avatar">{t.initials}</div>
-                <StarRating count={t.rating} />
+                <div className="testimonial-top-right">
+                  <StarRating count={t.rating} />
+                  <span className="testimonial-badge">Verified</span>
+                </div>
               </div>
               <blockquote className="testimonial-text">{t.text}</blockquote>
               <div className="testimonial-divider" />
