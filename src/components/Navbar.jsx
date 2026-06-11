@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from '../assets/criyx.avif'
 
 const links = [
   { label: 'Solutions', href: '#solutions' },
@@ -15,7 +16,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <a href="#" className="navbar-brand">
-          <img src="/src/assets/criyx.avif" alt="Criyx" className="navbar-logo-img" />
+          <img src={logo} alt="Criyx" className="navbar-logo-img" />
         </a>
 
         <div className={`navbar-links${open ? ' navbar-links--open' : ''}`}>
