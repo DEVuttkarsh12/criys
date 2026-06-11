@@ -1487,13 +1487,13 @@
 .features-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .features-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .features-group-header {
@@ -1514,7 +1514,7 @@
 }
 
 .features-group-label {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1532,11 +1532,11 @@
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--text);
   font-weight: 500;
   transition: all 0.3s ease;
-  padding: 0.15rem 0;
+  padding: 0.2rem 0;
 }
 
 .features-list-item:hover {
@@ -1564,17 +1564,17 @@
 }
 
 .diagram-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(249, 115, 22, 0.02));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 1.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(249, 115, 22, 0.025), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1.75rem;
   width: 100%;
   max-width: 400px;
-  backdrop-filter: blur(12px) saturate(1.3);
-  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
   box-shadow:
-    0 12px 36px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    0 16px 44px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -1586,20 +1586,23 @@
   left: 1rem;
   right: 1rem;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
   pointer-events: none;
+  z-index: 1;
 }
 
 .diagram-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
   margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 2;
 }
 
 .diagram-header svg {
@@ -1624,23 +1627,24 @@
 .diagram-node {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  background: rgba(255, 255, 255, 0.04);
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-radius: 14px;
+  padding: 0.7rem 1rem 0.7rem 0.7rem;
   width: 100%;
-  max-width: 220px;
-  font-size: 0.82rem;
+  max-width: 240px;
+  font-size: 0.88rem;
   color: var(--text);
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
+  z-index: 2;
   animation: diagramNodeEnter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes diagramNodeEnter {
-  from { opacity: 0; transform: translateX(-8px); }
+  from { opacity: 0; transform: translateX(-10px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
@@ -1648,11 +1652,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
-  min-width: 22px;
-  border-radius: 7px;
-  font-size: 0.6rem;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  border-radius: 8px;
+  font-size: 0.65rem;
   font-weight: 700;
   color: #000;
   background: linear-gradient(135deg, var(--accent), var(--accent-amber));
@@ -1670,11 +1674,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(251, 146, 60, 0.06));
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(251, 146, 60, 0.08));
   color: var(--accent-light);
 }
 
@@ -1682,10 +1686,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
+  height: 30px;
   color: var(--accent);
-  opacity: 0.4;
+  opacity: 0.35;
   animation: diagramArrowPulse 2s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
 }
 
 @keyframes diagramArrowPulse {
@@ -1695,11 +1701,13 @@
 
 .diagram-footnote {
   text-align: center;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   color: var(--text-dim);
-  margin-top: 1rem;
-  padding-top: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 2;
 }
 
 /* ── Results ── */
@@ -2321,7 +2329,7 @@
 }
 
 .contact-info-title {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--text);
   margin: 0;
@@ -2329,17 +2337,22 @@
 }
 
 .contact-info-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.7;
   margin: 0;
 }
 
 .contact-qr-section {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 16px;
-  padding: 1.25rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(249, 115, 22, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-qr-section:hover {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .contact-qr-wrapper {
@@ -2447,13 +2460,13 @@
 }
 
 .contact-alt-label {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--text);
 }
 
 .contact-alt-desc {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--text-dim);
   line-height: 1.6;
   margin: 0;
