@@ -19,19 +19,22 @@ export default function Features() {
   return (
     <section className="section" id="features">
       <div className="section-inner">
+        <div className="section-header">
+          <span className="section-tag reveal">Systems</span>
+          <h2 className="section-title reveal reveal-delay-1">
+            Built for real business operations, not just AI demos.
+          </h2>
+          <p className="section-desc reveal reveal-delay-2">
+            Criyx focuses on systems that actually run inside businesses — capturing leads,
+            handling conversations, updating CRMs, triggering follow-ups, and reporting performance.
+          </p>
+        </div>
+
         <div className="features-card reveal reveal-delay-1">
           <div className="features-card-glow" />
           <div className="features-card-shimmer" />
           <div className="features-layout">
             <div className="features-text">
-              <span className="section-tag">Systems</span>
-              <h2 className="section-title" style={{ textAlign: 'left', maxWidth: '500px' }}>
-                Built for real business operations, not just AI demos.
-              </h2>
-              <p className="section-desc" style={{ textAlign: 'left', margin: '0 0 2rem' }}>
-                Criyx focuses on systems that actually run inside businesses — capturing leads,
-                handling conversations, updating CRMs, triggering follow-ups, and reporting performance.
-              </p>
               <div className="features-list">
                 {features.map((f) => (
                   <div key={f} className="features-list-item">

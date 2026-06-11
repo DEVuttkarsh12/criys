@@ -78,24 +78,24 @@ export default function Results() {
   return (
     <section className="section" id="results">
       <div className="section-inner">
+        <div className="section-header">
+          <span className="section-tag reveal">Results</span>
+          <h2 className="section-title reveal reveal-delay-1">
+            Systems that save time every single day.
+          </h2>
+          <p className="section-desc reveal reveal-delay-2">
+            Real performance data from businesses using Criyx automation.
+          </p>
+        </div>
+
         <div className="results-card">
           <div className="results-card-glow" />
           <div className="results-card-shimmer" />
 
-          <div className="results-header">
-            <span className="section-tag reveal">Results</span>
-            <h2 className="section-title reveal reveal-delay-1">
-              Systems that save time every single day.
-            </h2>
-            <p className="section-desc reveal reveal-delay-2" style={{ textAlign: 'left', marginBottom: 0 }}>
-              Real performance data from businesses using Criyx automation.
-            </p>
-          </div>
-
           <div className="results-body">
             <div className="results-stats-grid">
               {stats.map((s, i) => (
-                <div key={s.label} className={`results-stat-card reveal reveal-delay-${i + 1}`}>
+                <div key={s.label} className="results-stat-card">
                   <div className="results-stat-icon">{s.icon}</div>
                   <div className="results-stat-value">{s.value}</div>
                   <div className="results-stat-label">{s.label}</div>
