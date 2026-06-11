@@ -26,8 +26,8 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#cta" className="navbar-cta" onClick={() => setOpen(false)}>
-            Book Strategy Call
+          <a href="https://cal.com/criyx.ai/30min" className="navbar-cta" onClick={() => setOpen(false)} target="_blank" rel="noopener noreferrer">
+            Schedule Your Call
           </a>
         </div>
 

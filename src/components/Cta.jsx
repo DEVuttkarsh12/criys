@@ -72,14 +72,14 @@ export default function Cta() {
                 <p className="contact-alt-desc">
                   Pick a time that works for you. We'll map out your automation potential in 30 minutes.
                 </p>
-                <a href="#" className="contact-alt-btn">
-                  <span>Schedule your call</span>
+                <a href="https://cal.com/criyx.ai/30min" className="contact-alt-btn" target="_blank" rel="noopener noreferrer">
+                  <span>Schedule Your Call</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
                 </a>
-                <span className="contact-alt-footnote">Calendly integration — coming soon</span>
+                <span className="contact-alt-footnote">No credit card required · 30 minutes</span>
               </div>
             </div>
 

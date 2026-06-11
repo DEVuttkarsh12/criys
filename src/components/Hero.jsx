@@ -61,8 +61,8 @@ export default function Hero({ isVisible = false }) {
         )}
         {subDone && (
           <div className="hero-buttons hero-fade-in hero-fade-in--delay">
-            <a href="#cta" className="btn btn-primary btn-lg">
-              Build My Automation
+            <a href="https://cal.com/criyx.ai/30min" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+              Schedule Your Call
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <a href="#solutions" className="btn btn-secondary btn-lg">
